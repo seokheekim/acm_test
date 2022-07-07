@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+spec:
+  template:
+    spec:
+      containers:
+      - image: us-docker.pkg.dev/davec-op-project/gcr.io/app:0.1.3
+        name: app
+        env:
+          - name: ENV
+            value: dev

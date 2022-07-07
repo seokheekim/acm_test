@@ -1,0 +1,12 @@
+namespace: app
+resources:
+  - ../base
+
+patchesStrategicMerge:
+  - app.yaml
+
+commonAnnotations:
+  configmanagement.gke.io/cluster-selector: cluster-env-dev
+# commonAnnotations:
+#   configsync.gke.io/cluster-name-selector: cluster-1
+nameSuffix: -dev
